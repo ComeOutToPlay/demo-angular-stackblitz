@@ -1,0 +1,9 @@
+<p>father works!</p>
+
+<h1>Child Message:</h1>
+{{ childMessage }}
+
+<app-child
+  fatherMessage="Luck I am"
+  (messageEmitter)="onMessageUpdate($event)"
+></app-child>

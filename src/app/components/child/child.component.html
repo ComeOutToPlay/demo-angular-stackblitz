@@ -1,0 +1,14 @@
+<p>child works!</p>
+<h1>Message from father:</h1>
+{{ fatherMessage }}
+<input type="text" placeholder="Soy input vacío" />
+<p>Your message: {{ childMessage }}</p>
+<input
+  type="text"
+  name="childMessage"
+  ngDefaultControl
+  [(ngModel)]="childMessage"
+  (ngModelChange)="sendMessageToFather()"
+/>
+
+<button (click)="hiClick()">Hi!</button>

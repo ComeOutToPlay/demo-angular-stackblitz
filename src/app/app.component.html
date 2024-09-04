@@ -1,0 +1,10 @@
+<h1>Hello from {{ name }}!</h1>
+<a target="_blank" href="https://angular.dev/overview">
+  Learn more about Angular
+</a>
+<br/>
+<button *ngIf="isLogged()" (click)="goHome()">Home</button>
+<button *ngIf="isLogged()" (click)="goAbout()">About</button>
+<button *ngIf="isLogged()" (click)="goFather()">Father</button>
+<button *ngIf="isLogged()" (click)="onLogOff()">Log Off</button>
+<router-outlet></router-outlet>

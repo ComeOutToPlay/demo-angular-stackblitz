@@ -1,0 +1,30 @@
+<p>login works!</p>
+
+<form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+  <h3>Username</h3>
+  <input
+    id="username"
+    type="text"
+    formControlName="username"
+    [class.invalid]="
+      loginFormGroup.get('username')?.invalid &&
+      loginFormGroup.get('username')?.touched
+    "
+  />
+  <h3>Password</h3>
+  <input
+    id="password"
+    type="password"
+    formControlName="password"
+    placeholder="Enter a Password"
+    [class.invalid]="
+      loginFormGroup.get('password')?.invalid &&
+      loginFormGroup.get('password')?.touched
+    "
+  />
+
+  <br />
+  <br />
+
+  <button type="submit" [disabled]="!loginFormGroup.valid">Login</button>
+</form>
